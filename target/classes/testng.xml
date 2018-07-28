@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+	<suite name = "Bosentan Test Automation Test Suite" parallel = "methods" thread-count ="5">
+	<test name = "Bosentan Test Cases">
+	
+	<classes>
+	
+	<class name = "com.bosentan.qa.testcases.LoginPageTest"></class>
+	<class name = "com.bosentan.qa.testcases.PrescriberDashboardPageTest"></class>
+	
+	
+	</classes>
+	
+	
+	
+	
+	
+	</test>	
+	
+	</suite>
