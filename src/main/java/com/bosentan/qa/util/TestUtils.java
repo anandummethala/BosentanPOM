@@ -22,8 +22,8 @@ public class TestUtils extends TestBase{
 		// TODO Auto-generated constructor stub
 	}
 
-	public static long PAGE_LOAD_TIMEOUT = 20;
-	public static long IMPLICIT_WAIT = 20;
+	public static long PAGE_LOAD_TIMEOUT = 100;
+	public static long IMPLICIT_WAIT = 50;
 	
 	public static String TESTDATA_SHEET_PATH = "C:\\Users\\uanand\\eclipse-workspace\\Bosentan\\src\\main\\java\\com\\bosentan\\qa\\testdata\\Bosentan3.xlsx";
 	

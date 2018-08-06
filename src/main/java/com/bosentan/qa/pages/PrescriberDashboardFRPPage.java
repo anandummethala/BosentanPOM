@@ -10,12 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.bosentan.qa.base.TestBase;
 
-public class PrescriberDashboardPage extends TestBase {
+public class PrescriberDashboardFRPPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id=\"enrollPat\"]")
 	WebElement Patientenroll;
 	
-	public PrescriberDashboardPage() throws IOException{
+	public PrescriberDashboardFRPPage() throws IOException{
 		PageFactory.initElements(driver, this);	
 	}
 	
@@ -24,9 +24,9 @@ public class PrescriberDashboardPage extends TestBase {
 	
 	}
 
-	public PatientIntakePage EnrollPatient() throws IOException {
+	public PatientIntakeFRPPage EnrollPatient() throws IOException {
 		Patientenroll.click();
-		return new PatientIntakePage();
+		return new PatientIntakeFRPPage();
 	}
 
 }

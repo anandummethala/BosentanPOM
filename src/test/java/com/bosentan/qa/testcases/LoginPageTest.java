@@ -7,15 +7,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.bosentan.qa.base.TestBase;
-import com.bosentan.qa.pages.LoginPage;
-import com.bosentan.qa.pages.PrescriberDashboardPage;
+import com.bosentan.qa.pages.LoginFRPPage;
+import com.bosentan.qa.pages.PrescriberDashboardFRPPage;
 
 import junit.framework.Assert;
 
 public class LoginPageTest extends TestBase{
 
-	LoginPage loginpage;
-	PrescriberDashboardPage prescriberdashboardpage;
+	LoginFRPPage loginpage;
+	PrescriberDashboardFRPPage prescriberdashboardpage;
 	
 	
 	
@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase{
 		
 		initialization();
 		
-		loginpage = new LoginPage();
+		loginpage = new LoginFRPPage();
 		
 	}
 	

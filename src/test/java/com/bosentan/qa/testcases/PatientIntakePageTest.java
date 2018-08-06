@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.bosentan.qa.base.TestBase;
-import com.bosentan.qa.pages.LoginPage;
-import com.bosentan.qa.pages.PatientAttestationPage;
-import com.bosentan.qa.pages.PatientIntakePage;
-import com.bosentan.qa.pages.PrescriberDashboardPage;
+import com.bosentan.qa.pages.LoginFRPPage;
+import com.bosentan.qa.pages.PatientAttestationFRPPage;
+import com.bosentan.qa.pages.PatientIntakeFRPPage;
+import com.bosentan.qa.pages.PrescriberDashboardFRPPage;
 import com.bosentan.qa.util.TestUtils;
 
 import junit.framework.Assert;
@@ -20,10 +20,10 @@ import junit.framework.Assert;
 public class PatientIntakePageTest extends TestBase{
 
 	
-	LoginPage loginpage;
-	PrescriberDashboardPage prescriberdashboardpage;
-	PatientIntakePage patientintakepage;
-	PatientAttestationPage patientattestationpage;
+	LoginFRPPage loginpage;
+	PrescriberDashboardFRPPage prescriberdashboardpage;
+	PatientIntakeFRPPage patientintakepage;
+	PatientAttestationFRPPage patientattestationpage;
 	
 	String sheetName = "Sheet1";
 	
@@ -38,7 +38,7 @@ public class PatientIntakePageTest extends TestBase{
 		
 		initialization();
 		
-		loginpage = new LoginPage();
+		loginpage = new LoginFRPPage();
 		prescriberdashboardpage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		patientintakepage =  prescriberdashboardpage.EnrollPatient();
 		
@@ -51,6 +51,8 @@ public class PatientIntakePageTest extends TestBase{
 	public void  validatePatientIntakeTitleTest() {
 		
 		String title = loginpage.validateLoginPageTitle();
+		
+		
 		Assert.assertEquals("Bosentan REMS - Patient Intake", title);
 		
 	}
@@ -76,10 +78,10 @@ public class PatientIntakePageTest extends TestBase{
 	}
 	
 	
-	@AfterMethod
+/*	@AfterMethod
 	
 	public void tearDown() {
 	driver.quit();
-}
+}*/
 	
 }

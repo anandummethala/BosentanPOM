@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.bosentan.qa.base.TestBase;
 
-public class LoginPage extends TestBase{
+public class LoginFRPPage extends TestBase{
 
 	// page Factory OR:
 	
@@ -24,7 +24,7 @@ public class LoginPage extends TestBase{
 	
 	
 	//initializing the page objects
-	public LoginPage() throws IOException {
+	public LoginFRPPage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -35,12 +35,12 @@ public class LoginPage extends TestBase{
 		return driver.getTitle();
 	}
 	
-	public PrescriberDashboardPage login(String un, String pwd) throws IOException {
+	public PrescriberDashboardFRPPage login(String un, String pwd) throws IOException {
 		Username.sendKeys(un);
 		Password.sendKeys(pwd);
 		Loginbtn.click();
 		
-		return new PrescriberDashboardPage();
+		return new PrescriberDashboardFRPPage();
 	}
 	
 }

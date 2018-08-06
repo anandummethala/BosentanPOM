@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.bosentan.qa.base.TestBase;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
-public class PatientIntakePage extends TestBase{
+public class PatientIntakeFRPPage extends TestBase{
 
 	
 
@@ -45,7 +45,7 @@ public class PatientIntakePage extends TestBase{
 		
 		
 		
-		public PatientIntakePage() throws IOException {
+		public PatientIntakeFRPPage() throws IOException {
 			PageFactory.initElements(driver, this);
 		}
 		
@@ -55,7 +55,7 @@ public class PatientIntakePage extends TestBase{
 		}
 		
 		
-		public PatientAttestationPage PatientDetails(String fn, String ln, String dob, String add, String zip, String phn) throws IOException {
+		public PatientAttestationFRPPage PatientDetails(String fn, String ln, String dob, String add, String zip, String phn) throws IOException, InterruptedException {
 			
 			FirstName.sendKeys(fn);
 			LastName.sendKeys(ln);
@@ -65,13 +65,13 @@ public class PatientIntakePage extends TestBase{
 			Address.sendKeys(add);
 			ZipCode.sendKeys(zip);
 			Phone.sendKeys(phn);
-			
+			Thread.sleep(5000);
 			WebElement nextbtn = driver.findElement(By.xpath("//*[@id=\"patIntakeNextBtn\"]"));
 			clickElementByJS(nextbtn, driver);
 			
 			
 			
-			return new PatientAttestationPage();
+			return new PatientAttestationFRPPage();
 			
 		}
 		

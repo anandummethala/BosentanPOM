@@ -7,17 +7,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.bosentan.qa.base.TestBase;
-import com.bosentan.qa.pages.LoginPage;
-import com.bosentan.qa.pages.PatientIntakePage;
-import com.bosentan.qa.pages.PrescriberDashboardPage;
+import com.bosentan.qa.pages.LoginFRPPage;
+import com.bosentan.qa.pages.PatientIntakeFRPPage;
+import com.bosentan.qa.pages.PrescriberDashboardFRPPage;
 
 import junit.framework.Assert;
 
 public class PrescriberDashboardPageTest extends TestBase{
 
-	LoginPage loginpage;
-	PrescriberDashboardPage prescriberdashboardpage;
-	PatientIntakePage patientintakepage;
+	LoginFRPPage loginpage;
+	PrescriberDashboardFRPPage prescriberdashboardpage;
+	PatientIntakeFRPPage patientintakepage;
 	
 	public PrescriberDashboardPageTest() throws IOException {
 		super();
@@ -29,7 +29,7 @@ public class PrescriberDashboardPageTest extends TestBase{
 		
 		initialization();
 		
-		loginpage = new LoginPage();
+		loginpage = new LoginFRPPage();
 		prescriberdashboardpage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		
 		
